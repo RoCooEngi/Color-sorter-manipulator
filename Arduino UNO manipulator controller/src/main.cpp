@@ -50,7 +50,7 @@ void setup() {
 
   // Fixing to PWM pins
   servo_push.attach(3);
-  servo_raise.attach(7);
+  servo_raise.attach(6);
   servo_catch.attach(9);
   servo_rotate.attach(5);
   delay(100);

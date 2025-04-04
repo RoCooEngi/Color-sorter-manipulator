@@ -1,5 +1,9 @@
 # Automatic cube sorting by color
 
+## Installation
+
+The project was created using the PlatformIO extension for Visual Studio code. To work with the programs, you need to unzip the repository or clone it using the command `git clone https://github.com/RoCooEngi/Color-sorter-manipulator.git your_folder` and open the folders separately from each other using the PlatformIO extension. If you need to work in the Arduino editor, extract the source files of the programs along the path `src/main.cpp`, rename them with the `.ino` extension and check for the presence of the corresponding libraries in your Arduino environment.
+
 ## System description
 
 The project is an automated color cube sorting system using ESP32-CAM for color analysis and Arduino UNO to control the manipulator. The two-link manipulator is equipped with four servos that provide gripping, lifting, moving and sorting of objects. The entire system is controlled via a serial connection between ESP32-CAM and Arduino UNO.
@@ -38,6 +42,10 @@ Simple smooth servo movement functions are used to control the movements. For ex
 
 
 # Автоматическая сортировка кубиков по цвету
+
+## Установка
+
+Проект был создан при помощи расширения PlatformIO для Visual Studio code. Для работы с программами необходимо разархивировать репозиторий или клонировать его используя комманду `git clone https://github.com/RoCooEngi/Color-sorter-manipulator.git ваша_папка` и открывать папки отдельно друг от друга используя расширение PlatformIO. Если необходимо работать в редакторе Arduino, то извлеките исходные файлы программ по пути `src/main.cpp`, переименуйте их с расширением `.ino` и проверьте наличие соответствующих библиотек в своей среде Arduino.
 
 ## Описание системы
 
