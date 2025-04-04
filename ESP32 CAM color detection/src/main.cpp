@@ -145,7 +145,7 @@ const char* predominantColor(RGBGrid *grid) {
             }
 
             // Determine which channel is dominant
-            if (r > g && r > b && r > (g + b) * 0.7) {
+            if (r * 0.8 > g && r * 0.8 > b && r * 0.8 > (g + b) * 0.6) {
                 redCount++;
             } else if (g > r && g > b && g > (r + b) * 0.6) {
                 greenCount++;
