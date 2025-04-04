@@ -40,6 +40,10 @@ Arduino receives data from ESP32-CAM, determines the required direction of the m
 
 Simple smooth servo movement functions are used to control the movements. For example, capture is performed by the command `servo_catch.write(170)`, lifting - `slow_servo(servo_raise, 110)`, moving forward - `slow_servo(servo_push, 70)`, and rotation to the desired angle is performed via `slow_servo(servo_rotate, rotation)`. After sorting, the manipulator returns to its original position.
 
+## Video demonstration
+
+https://github.com/user-attachments/assets/ba90d38b-0af4-4ede-af0f-4c7ed6c9b37e
+
 
 # Автоматическая сортировка кубиков по цвету
 
@@ -83,3 +87,8 @@ $$Saturation = \frac{Max(R, G, B) - Min(R, G, B)}{Max(R, G, B)}$$
 Arduino принимает данные от ESP32-CAM, определяет необходимое направление движения манипулятора и выполняет сортировку. При поступлении команды цветового распознавания манипулятор захватывает кубик, поднимает его, перемещает в нужное положение, отпускает, а затем возвращается в исходное состояние. После завершения процесса отправляется команда "go" на ESP32-CAM, сигнализирующая о готовности к следующему циклу.
 
 Для управления движениями используются простые функции плавного перемещения сервоприводов. Например, захват осуществляется командой `servo_catch.write(170)`, подъем — `slow_servo(servo_raise, 110)`, перемещение вперед — `slow_servo(servo_push, 70)`, а поворот на нужный угол выполняется через `slow_servo(servo_rotate, rotation)`. После сортировки манипулятор возвращается в исходное положение.
+
+## Видео демонстрация
+
+https://github.com/user-attachments/assets/ba90d38b-0af4-4ede-af0f-4c7ed6c9b37e
+
