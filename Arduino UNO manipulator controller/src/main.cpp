@@ -30,7 +30,7 @@ void slow_servo(Servo servo, int target, int speed = 5) {
 
 void servo_return() {
   // Returns the servos to their original position
-  servo_catch.write(60);
+  servo_catch.write(70);
   delay(100);
   slow_servo(servo_raise, 80);
   slow_servo(servo_push, 110);
@@ -39,7 +39,7 @@ void servo_return() {
 
 void cube_sorting(int rotation) {
   // Rotates servo drives during sorting
-  servo_catch.write(130);
+  servo_catch.write(135);
   slow_servo(servo_raise, 110);
   slow_servo(servo_push, 70);
   slow_servo(servo_rotate, rotation);
@@ -64,7 +64,7 @@ void setup() {
   pinMode(LED, OUTPUT);
   Serial.begin(115200);
   // Starting position
-  servo_catch.write(60);
+  servo_catch.write(70);
   delay(100);
   servo_raise.write(80);
   delay(100);
