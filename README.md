@@ -6,7 +6,7 @@ The project was created using the PlatformIO extension for Visual Studio code. T
 
 ## System description
 
-The project is an automated color cube sorting system using ESP32-CAM for color analysis and Arduino UNO to control the manipulator. The two-link manipulator is equipped with four servos that provide gripping, lifting, moving and sorting of objects. The entire system is controlled via a serial connection between ESP32-CAM and Arduino UNO.
+The project is an automated color cube sorting system using ESP32-CAM for color analysis and Arduino UNO to control the manipulator. The two-link manipulator is equipped with four servos that provide gripping, lifting, moving and sorting of objects. The entire system is controlled via a serial connection (UART) between ESP32-CAM and Arduino UNO.
 
 ## Hardware
 
@@ -17,6 +17,8 @@ The full circuit diagram looks like this:
 ## Software
 
 ### Image processing on the ESP32-CAM
+
+The original program is located at: `/ESP32 CAM color detection/src/main.cpp`
 
 The camera operates in RGB565 format with a resolution of 240x240. The image is divided into a 3x3 grid, after which the average color is calculated for each segment. Next, noise is filtered based on brightness and saturation, and then the dominant color is determined. If a color is recognized, the ESP32-CAM transmits the corresponding value ("RED", "GREEN" or "PURPLE") to the Arduino via UART.
 
@@ -35,6 +37,8 @@ $$Brightness = \frac{R + G + B}{3}$$
 $$Saturation = \frac{Max(R, G, B) - Min(R, G, B)}{Max(R, G, B)}$$
 
 ### Manipulator control on Arduino UNO
+
+The original program is located at: `/Arduino UNO manipulator controller/src/main.cpp`
 
 Arduino receives data from ESP32-CAM, determines the required direction of the manipulator movement and performs sorting. When a color recognition command is received, the manipulator grabs the cube, picks it up, moves it to the desired position, releases it, and then returns to its original state. After the process is completed, the "go" command is sent to ESP32-CAM, signaling readiness for the next cycle.
 
@@ -62,7 +66,7 @@ Mail: astrodublewaffle@gmail.com
 
 ## Описание системы
 
-Проект представляет собой автоматизированную систему сортировки цветных кубиков с использованием ESP32-CAM для цветового анализа и Arduino UNO для управления манипулятором. Двузвенный манипулятор оснащен четырьмя сервоприводами, которые обеспечивают захват, подъем, перемещение и сортировку объектов. Вся система управляется через последовательное соединение между ESP32-CAM и Arduino UNO.
+Проект представляет собой автоматизированную систему сортировки цветных кубиков с использованием ESP32-CAM для цветового анализа и Arduino UNO для управления манипулятором. Двузвенный манипулятор оснащен четырьмя сервоприводами, которые обеспечивают захват, подъем, перемещение и сортировку объектов. Вся система управляется через последовательное соединение (UART) между ESP32-CAM и Arduino UNO.
 
 ## Аппаратная часть
 
@@ -74,6 +78,8 @@ Mail: astrodublewaffle@gmail.com
 ## Программная часть
 
 ### Обработка изображения на ESP32-CAM
+
+Оригинал программы находится по пути: `/ESP32 CAM color detection/src/main.cpp`
 
 Камера работает в формате RGB565 с разрешением 240x240. Изображение делится на сетку 3×3, после чего для каждого сегмента вычисляется средний цвет. Далее происходит фильтрация шумов на основе яркости и насыщенности, а затем определяется доминирующий цвет. Если цвет распознан, ESP32-CAM передает соответствующее значение ("RED", "GREEN" или "PURPLE") на Arduino через UART.
 
@@ -92,6 +98,8 @@ $$Brightness = \frac{R + G + B}{3}$$
 $$Saturation = \frac{Max(R, G, B) - Min(R, G, B)}{Max(R, G, B)}$$
 
 ### Управление манипулятором на Arduino UNO
+
+Оригинал программы находится по пути: `/Arduino UNO manipulator controller/src/main.cpp`
 
 Arduino принимает данные от ESP32-CAM, определяет необходимое направление движения манипулятора и выполняет сортировку. При поступлении команды цветового распознавания манипулятор захватывает кубик, поднимает его, перемещает в нужное положение, отпускает, а затем возвращается в исходное состояние. После завершения процесса отправляется команда "go" на ESP32-CAM, сигнализирующая о готовности к следующему циклу.
 
