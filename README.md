@@ -44,6 +44,15 @@ Simple smooth servo movement functions are used to control the movements. For ex
 
 https://github.com/user-attachments/assets/ba90d38b-0af4-4ede-af0f-4c7ed6c9b37e
 
+## Contacts
+
+Telegram: @space_adventure_sci
+
+Mail: astrodublewaffle@gmail.com
+
+
+
+
 
 # Автоматическая сортировка кубиков по цвету
 
@@ -91,4 +100,10 @@ Arduino принимает данные от ESP32-CAM, определяет н�
 ## Видео демонстрация
 
 https://github.com/user-attachments/assets/ba90d38b-0af4-4ede-af0f-4c7ed6c9b37e
+
+## Контакты
+
+Telegram: @space_adventure_sci
+
+Почта: astrodublewaffle@gmail.com
 
